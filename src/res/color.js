@@ -2,7 +2,7 @@
 
 const Colors = {
   primary: '#1292B4',
-  secondary: '#FFF',
+  secondary: '#000',
   white: '#FFF',
   lighter: '#F3F3F3',
   light: '#DAE1E7',

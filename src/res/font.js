@@ -3,7 +3,9 @@
 
 const Fonts = {
   headerSize: 40,
+  subheaderSize: 20,
   primaryTypo: 'sans-serif-condensed',
+  secondaryTypo: 'Roboto',
 };
 
 export default Fonts;
