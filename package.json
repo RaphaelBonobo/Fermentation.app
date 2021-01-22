@@ -1,6 +1,7 @@
 {
-  "name": "ProjetKatz",
+  "name": "projetkatz",
   "version": "0.0.1",
+  "description": "An android and ios app to track ferment, hold on to your recipe and share it with the world",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -39,5 +40,14 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "license": "Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) ",
+  "contributors": [
+    {
+      "name": "Raphaël Bonnet"
+    },
+    {
+      "name": "Jacques Delon"
+    }
+  ]
 }
