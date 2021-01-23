@@ -1,15 +1,18 @@
 import React from 'react';
-
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import AddFerment from './src/screen/AddFerment.js'
 import Strings from 'res/strings.js';
-import Header from 'library/component/Header.js';
-import Subheader from 'library/component/Subheader.js';
+
+const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <>
-      <Header header={Strings.testHeader} />
-      <Subheader subheader={Strings.testSubheader} />
-    </>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName={Strings.scrAfMain}>
+        <Stack.Screen name={Strings.scrAfMain} component={AddFerment} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
