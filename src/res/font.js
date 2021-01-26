@@ -4,6 +4,7 @@
 const Fonts = {
   headerSize: 40,
   subheaderSize: 20,
+  regularSize: 16,
   primaryTypo: 'sans-serif-condensed',
   secondaryTypo: 'Roboto',
 };

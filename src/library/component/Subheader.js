@@ -1,5 +1,5 @@
-// Classic subheader component that is meant to encapsulate custom text sent from other components
-// Usually meant for under titles and complementary but important information
+// Classic reusable subheader component that is meant to encapsulate custom text sent from other components
+// Usually meant for under titles and complementary but important informations
 
 import {Text, StyleSheet, View} from 'react-native';
 import React from 'react';
@@ -14,13 +14,17 @@ const Subheader = (props) => (
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
+    alignItems: 'center',
+    borderColor: Colors.primary,
+    borderWidth: 1,
+    margin: 10,
+    padding: 10,
   },
   subheaderText: {
     fontSize: Fonts.subheaderSize,
-    fontFamily: Fonts.secondaryTypo,
+    fontFamily: Fonts.primaryTypo,
     textAlign: 'center',
-    color: Colors.secondary,
+    color: Colors.primary,
   },
 });
 

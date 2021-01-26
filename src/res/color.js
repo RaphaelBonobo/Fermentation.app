@@ -1,7 +1,7 @@
 // The main theming colors as defined by this file
 
 const Colors = {
-  primary: '#1292B4',
+  primary: '#000',
   secondary: '#000',
   white: '#FFF',
   lighter: '#F3F3F3',

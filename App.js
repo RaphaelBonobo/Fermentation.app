@@ -1,16 +1,22 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import AddFerment from './src/screen/AddFerment.js'
-import Strings from 'res/strings.js';
+import AddFermentScreen from './src/screen/AddFerment.js';
+import MainScreen from './src/screen/Main.js';
+//import Strings from 'res/strings.js';
 
 const Stack = createStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName={Strings.scrAfMain}>
-        <Stack.Screen name={Strings.scrAfMain} component={AddFerment} />
+      <Stack.Navigator
+        initialRouteName="Main"
+        screenOptions={{
+          headerShown: false,
+        }}>
+        <Stack.Screen name="Main" component={MainScreen} />
+        <Stack.Screen name="AddFerment" component={AddFermentScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
