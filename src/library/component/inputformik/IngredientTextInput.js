@@ -8,10 +8,8 @@
 
 import {StyleSheet, Button, View} from 'react-native';
 import React from 'react';
-import Colors from 'res/color.js';
-import Fonts from 'res/font.js';
-import Strings from 'res/strings.js';
-import RegularTextInput from 'library/component/RegularTextInput.js';
+import {Fonts, Colors, Strings} from 'res';
+import RegularTextInput from 'inputformik/RegularTextInput.js';
 import {Field} from 'formik';
 
 const IngredientTextInput = (props) => {

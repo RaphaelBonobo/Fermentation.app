@@ -3,8 +3,7 @@
 
 import {Text, StyleSheet, View} from 'react-native';
 import React from 'react';
-import Colors from 'res/color.js';
-import Fonts from 'res/font.js';
+import {Fonts, Colors} from 'res';
 
 const Subheader = (props) => (
   <View style={styles.container}>

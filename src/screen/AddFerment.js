@@ -1,16 +1,14 @@
 import React from 'react';
-import Subheader from 'library/component/Subheader.js';
-import HeaderTextInput from 'library/component/HeaderTextInput.js';
-import IngredientTextInput from 'library/component/IngredientTextInput.js';
-import RegularTextInput from 'library/component/RegularTextInput.js';
-import RegularDateInput from 'library/component/RegularDateInput.js';
-import Strings from 'res/strings.js';
-import Fonts from 'res/font.js';
-import Colors from 'res/color.js';
+import Subheader from 'customui/Subheader.js';
+import {
+  HeaderTextInput,
+  IngredientTextInput,
+  RegularDateInput,
+  RegularTextInput,
+} from 'inputformik';
+import {Fonts, Colors, Strings} from 'res';
 import {ScrollView, StyleSheet, Button} from 'react-native';
 import {Field, FieldArray, Formik} from 'formik';
-import dayjs, { Dayjs } from 'dayjs';
-import { date } from 'yup';
 
 const AddFermentScreen = () => {
   return (
