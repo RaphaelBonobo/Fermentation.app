@@ -1,8 +1,5 @@
-// Custom TextInput for regular text component made to fit in Formik components and refractor for simplicity sake.
+// This a custom bigger text input specifically styled to match header exceptations, usually meant for ferment titles and heavy titles.
 // Since our form for registering ferment WILL be long and complex, we chose to simplify and spread it out for readability.
-
-// The main point of all of this : onChangeText={(text) => onChange(name)(text)}
-// This allows us to dynamically add new custom fields and track the state separatly using Formik magic without complex store manipulation.
 
 // This component ONLY WORKS within a <Formik> component and as a child of a <Field> component.
 
@@ -10,7 +7,7 @@ import {TextInput, StyleSheet} from 'react-native';
 import React from 'react';
 import {Fonts, Colors} from 'res';
 
-const RegularTextInput = (props) => {
+const SubheaderTextInput = (props) => {
   // Formik sends in the props that automagically connects the Input form with the
   // general Formik Context (provided within the AddFerment screen with <Formik> component)
 
@@ -27,7 +24,7 @@ const RegularTextInput = (props) => {
   return (
     <>
       <TextInput
-        style={styles.regularText}
+        style={styles.subheaderText}
         value={value}
         onChangeText={(text) => onChange(name)(text)}
         onBlur={() => {
@@ -41,12 +38,15 @@ const RegularTextInput = (props) => {
 };
 
 const styles = StyleSheet.create({
-  regularText: {
-    fontSize: Fonts.regularSize,
+  container: {
+    alignItems: 'center',
+  },
+  subheaderText: {
+    fontSize: Fonts.subheaderSize,
     fontFamily: Fonts.primaryTypo,
     textAlign: 'center',
     color: Colors.primary,
   },
 });
 
-export default RegularTextInput;
+export default SubheaderTextInput;
