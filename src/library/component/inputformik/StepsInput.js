@@ -1,6 +1,7 @@
+// StepsInput
+
 import {View} from 'react-native';
 import React from 'react';
-//import {Fonts, Colors, Strings} from 'res';
 import SubheaderTextInput from './SubheaderTextInput.js';
 import TemperatureInput from './TemperatureInput.js';
 import {Field} from 'formik';

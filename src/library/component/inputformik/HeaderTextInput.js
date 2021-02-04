@@ -1,4 +1,5 @@
-// This a custom bigger text input specifically styled to match header exceptations, usually meant for ferment titles and heavy titles.
+// HeaderTextInput
+//This a custom bigger text input specifically styled to match header exceptations, usually meant for ferment titles and heavy titles.
 // Since our form for registering ferment WILL be long and complex, we chose to simplify and spread it out for readability.
 
 // This component ONLY WORKS within a <Formik> component and as a child of a <Field> component.

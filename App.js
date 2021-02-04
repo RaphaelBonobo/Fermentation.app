@@ -10,7 +10,6 @@ import theme from 'res/theme.js';
 const Stack = createStackNavigator();
 
 const App = () => {
-  console.log(theme);
   return (
     <ThemeProvider theme={theme}>
       <NavigationContainer>

@@ -1,3 +1,4 @@
+// strings file
 // all the static strings of the app
 // prefix details :
 // af = add ferment

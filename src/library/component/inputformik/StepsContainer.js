@@ -1,3 +1,4 @@
+// StepsContainer
 // Custom TextInput for regular text component made to fit in Formik components and refractor for simplicity sake.
 // Since our form for registering ferment WILL be long and complex, we chose to simplify and spread it out for readability.
 
@@ -8,7 +9,6 @@
 
 import {Button, View} from 'react-native';
 import React from 'react';
-import {Colors} from 'res';
 import Accordion from 'react-native-collapsible/Accordion';
 import {useState} from 'react';
 import StepsInput from './StepsInput.js';
@@ -44,7 +44,6 @@ const StepsContainer = (props) => {
       />
       <Button
         title={'Add'}
-        color={Colors.primary}
         onPress={() => {
           props.push({
             nameStep: 'Step',

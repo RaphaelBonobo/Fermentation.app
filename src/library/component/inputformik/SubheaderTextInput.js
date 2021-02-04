@@ -1,3 +1,4 @@
+// SubheaderTextInput
 // This a custom bigger text input specifically styled to match header exceptations, usually meant for ferment titles and heavy titles.
 // Since our form for registering ferment WILL be long and complex, we chose to simplify and spread it out for readability.
 
@@ -5,7 +6,6 @@
 
 import {TextInput} from 'react-native';
 import React from 'react';
-import {Fonts, Colors} from 'res';
 
 const SubheaderTextInput = (props) => {
   // Formik sends in the props that automagically connects the Input form with the

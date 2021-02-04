@@ -1,3 +1,4 @@
+// IngredientTextInput
 // Custom TextInput for regular text component made to fit in Formik components and refractor for simplicity sake.
 // Since our form for registering ferment WILL be long and complex, we chose to simplify and spread it out for readability.
 
@@ -8,7 +9,7 @@
 
 import {Button, View} from 'react-native';
 import React from 'react';
-import {Colors, Strings} from 'res';
+import {Strings} from 'res';
 import RegularTextInput from 'inputformik/RegularTextInput.js';
 import {Field} from 'formik';
 
@@ -33,7 +34,6 @@ const IngredientTextInput = (props) => {
             placeholder="Type in a quantity"
           />
           <Button
-            color={Colors.primary}
             key={`ingredients.${index}.remove`}
             title="-"
             onPress={() => {
@@ -44,7 +44,6 @@ const IngredientTextInput = (props) => {
       ))}
       <Button
         title={Strings.scrMnAddIngButton}
-        color={Colors.primary}
         onPress={() => {
           props.push({
             nameIngredient: '',

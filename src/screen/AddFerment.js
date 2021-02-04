@@ -1,3 +1,4 @@
+// AppFerment Screen
 // This is the Screen and higher parent component that collects the data when the user decides to add a new ferment to his list
 // The Formik library helps us automagically create a local state proper to the form, which will help us only call Redux when needed.
 // The other main advantage is that it allows us to encapsulate more easily and to render a readable and accessible code.
@@ -11,7 +12,7 @@ import {
   RegularTextInput,
   StepsContainer,
 } from 'inputformik';
-import {Colors, Strings} from 'res';
+import {Strings} from 'res';
 import {ScrollView, Button} from 'react-native';
 import {Field, FieldArray, Formik} from 'formik';
 
@@ -71,11 +72,7 @@ const AddFermentScreen = () => {
             The point is for the fermenter to create a procedural recipe reflecting closely his practice. */}
             <FieldArray name="steps" component={StepsContainer} />
 
-            <Button
-              onPress={handleSubmit}
-              title={Strings.scrMnAddButton}
-              color={Colors.primary}
-            />
+            <Button onPress={handleSubmit} title={Strings.scrMnAddButton} />
           </>
         )}
       </Formik>

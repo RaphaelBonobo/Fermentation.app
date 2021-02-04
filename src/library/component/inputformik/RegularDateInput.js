@@ -1,3 +1,4 @@
+// RegularDateInput
 // This is a custom date component made for DatePicker to interact with Formik easily.
 // Since our form for registering ferment WILL be long and complex, we chose to simplify and spread it out for readability.
 

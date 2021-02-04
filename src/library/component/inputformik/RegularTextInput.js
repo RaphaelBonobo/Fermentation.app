@@ -1,3 +1,4 @@
+// RegularTextInput
 // Custom TextInput for regular text component made to fit in Formik components and refractor for simplicity sake.
 // Since our form for registering ferment WILL be long and complex, we chose to simplify and spread it out for readability.
 

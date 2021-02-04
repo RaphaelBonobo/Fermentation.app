@@ -1,5 +1,7 @@
+//TemperatureInput
+
 import React from 'react';
-import MultiSlider from '@ptomasroos/react-native-multi-slider'
+import MultiSlider from '@ptomasroos/react-native-multi-slider';
 
 const TemperatureInput = (props) => {
   const {
