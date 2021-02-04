@@ -1,7 +1,8 @@
 import {View} from 'react-native';
 import React from 'react';
 //import {Fonts, Colors, Strings} from 'res';
-import SubheaderTextInput from 'inputformik/SubheaderTextInput.js';
+import SubheaderTextInput from './SubheaderTextInput.js';
+import TemperatureInput from './TemperatureInput.js';
 import {Field} from 'formik';
 
 const StepsInput = (section, index, isActive) => {
@@ -12,6 +13,11 @@ const StepsInput = (section, index, isActive) => {
         name={`steps.${index}.nameStep`}
         component={SubheaderTextInput}
         placeholder="Name the step"
+      />
+      <Field
+        key={`steps.${index}.tempStep`}
+        name={`steps.${index}.tempStep`}
+        component={TemperatureInput}
       />
     </View>
   );

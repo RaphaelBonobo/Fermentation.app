@@ -6,12 +6,13 @@
 
 // This component ONLY WORKS within a <Formik> component and as a child of a <Field> component.
 
-import {StyleSheet, Button, View, Text} from 'react-native';
+import {Button, View} from 'react-native';
 import React from 'react';
-import {Fonts, Colors} from 'res';
+import {Colors} from 'res';
 import Accordion from 'react-native-collapsible/Accordion';
 import {useState} from 'react';
 import StepsInput from './StepsInput.js';
+import Subheader from 'customui/Subheader.js';
 
 const StepsContainer = (props) => {
   const {
@@ -22,11 +23,9 @@ const StepsContainer = (props) => {
 
   const renderHeader = (section, index, isActive) => {
     //Accordion Header view
-    let stepNumber = index + 1;
     return (
-      <View style={styles.headerContainer}>
-        <Text>{section.nameStep}</Text>
-        <Text>{stepNumber}</Text>
+      <View>
+        <Subheader subheader={section.nameStep} />
       </View>
     );
   };
@@ -47,26 +46,17 @@ const StepsContainer = (props) => {
         title={'Add'}
         color={Colors.primary}
         onPress={() => {
-          props.push();
+          props.push({
+            nameStep: 'Step',
+            durationStep: 'Pouleto',
+            tempStep: 'Como estas?',
+            controlSimpleStep: [''],
+            commentStep: '',
+          });
         }}
       />
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  headerContainer: {
-    flexDirection: 'row',
-  },
-  arrayContainer: {
-    flexDirection: 'row',
-  },
-  regularText: {
-    fontSize: Fonts.regularSize,
-    fontFamily: Fonts.primaryTypo,
-    textAlign: 'center',
-    color: Colors.primary,
-  },
-});
 
 export default StepsContainer;

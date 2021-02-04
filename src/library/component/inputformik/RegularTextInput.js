@@ -6,9 +6,8 @@
 
 // This component ONLY WORKS within a <Formik> component and as a child of a <Field> component.
 
-import {TextInput, StyleSheet} from 'react-native';
+import {TextInput} from 'react-native';
 import React from 'react';
-import {Fonts, Colors} from 'res';
 
 const RegularTextInput = (props) => {
   // Formik sends in the props that automagically connects the Input form with the
@@ -27,7 +26,6 @@ const RegularTextInput = (props) => {
   return (
     <>
       <TextInput
-        style={styles.regularText}
         value={value}
         onChangeText={(text) => onChange(name)(text)}
         onBlur={() => {
@@ -39,14 +37,5 @@ const RegularTextInput = (props) => {
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  regularText: {
-    fontSize: Fonts.regularSize,
-    fontFamily: Fonts.primaryTypo,
-    textAlign: 'center',
-    color: Colors.primary,
-  },
-});
 
 export default RegularTextInput;

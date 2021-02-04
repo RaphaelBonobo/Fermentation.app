@@ -36,8 +36,7 @@ const AddFermentScreen = () => {
             },
           ],
         }}
-        onSubmit={(values) => console.log(values)}
-        onBlur={(values) => console.log(values)}>
+        onSubmit={(values) => console.log(values)}>
         {({handleChange, handleBlur, handleSubmit, values}) => (
           <>
             {/* This field call for a specifically tailored TextInput <HeaderTextInput> to gather the main name of the ferment */}

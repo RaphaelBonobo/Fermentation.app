@@ -4,7 +4,7 @@
 // This component ONLY WORKS within a <Formik> component and as a child of a <Field> component.
 
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {View} from 'react-native';
 import DatePicker from 'react-native-date-picker';
 
 const RegularDateInput = (props) => {
@@ -19,7 +19,7 @@ const RegularDateInput = (props) => {
   // we might either create our own Date Picker or chose to adapt the variation around the user' OS.
 
   return (
-    <View style={styles.container}>
+    <View>
       <DatePicker
         androidVariant="nativeAndroid"
         date={value}
@@ -28,12 +28,5 @@ const RegularDateInput = (props) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    paddingBottom: 5,
-  },
-});
 
 export default RegularDateInput;

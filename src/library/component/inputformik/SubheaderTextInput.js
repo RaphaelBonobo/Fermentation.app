@@ -3,7 +3,7 @@
 
 // This component ONLY WORKS within a <Formik> component and as a child of a <Field> component.
 
-import {TextInput, StyleSheet} from 'react-native';
+import {TextInput} from 'react-native';
 import React from 'react';
 import {Fonts, Colors} from 'res';
 
@@ -24,7 +24,6 @@ const SubheaderTextInput = (props) => {
   return (
     <>
       <TextInput
-        style={styles.subheaderText}
         value={value}
         onChangeText={(text) => onChange(name)(text)}
         onBlur={() => {
@@ -36,17 +35,5 @@ const SubheaderTextInput = (props) => {
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-  },
-  subheaderText: {
-    fontSize: Fonts.subheaderSize,
-    fontFamily: Fonts.primaryTypo,
-    textAlign: 'center',
-    color: Colors.primary,
-  },
-});
 
 export default SubheaderTextInput;

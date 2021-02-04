@@ -3,9 +3,8 @@
 
 // This component ONLY WORKS within a <Formik> component and as a child of a <Field> component.
 
-import {TextInput, StyleSheet} from 'react-native';
 import React from 'react';
-import {Fonts, Colors} from 'res';
+import styled from 'styled-components/native';
 
 const HeaderTextInput = (props) => {
   // Formik sends in the props that automagically connects the Input form with the
@@ -13,7 +12,7 @@ const HeaderTextInput = (props) => {
 
   const {
     field: {name, onBlur, onChange, value},
-    form: {errors, touched, setFieldTouched},
+    form: {setFieldTouched},
     ...inputProps
   } = props;
 
@@ -23,8 +22,7 @@ const HeaderTextInput = (props) => {
 
   return (
     <>
-      <TextInput
-        style={styles.headerText}
+      <StyledHeaderInput
         value={value}
         onChangeText={(text) => onChange(name)(text)}
         onBlur={() => {
@@ -37,16 +35,8 @@ const HeaderTextInput = (props) => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-  },
-  headerText: {
-    fontSize: Fonts.headerSize,
-    fontFamily: Fonts.primaryTypo,
-    textAlign: 'center',
-    color: Colors.primary,
-  },
-});
+const StyledHeaderInput = styled.TextInput`
+  color: ${(props) => props.theme.main};
+`;
 
 export default HeaderTextInput;

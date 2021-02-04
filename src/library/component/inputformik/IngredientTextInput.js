@@ -6,9 +6,9 @@
 
 // This component ONLY WORKS within a <Formik> component and as a child of a <Field> component.
 
-import {StyleSheet, Button, View} from 'react-native';
+import {Button, View} from 'react-native';
 import React from 'react';
-import {Fonts, Colors, Strings} from 'res';
+import {Colors, Strings} from 'res';
 import RegularTextInput from 'inputformik/RegularTextInput.js';
 import {Field} from 'formik';
 
@@ -19,7 +19,7 @@ const IngredientTextInput = (props) => {
   return (
     <>
       {values.ingredients.map((ingredients, index) => (
-        <View key={index} style={styles.arrayContainer}>
+        <View key={index}>
           <Field
             key={`ingredients.${index}.nameIngredient`}
             name={`ingredients.${index}.nameIngredient`}
@@ -55,17 +55,5 @@ const IngredientTextInput = (props) => {
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  arrayContainer: {
-    flexDirection: 'row',
-  },
-  regularText: {
-    fontSize: Fonts.regularSize,
-    fontFamily: Fonts.primaryTypo,
-    textAlign: 'center',
-    color: Colors.primary,
-  },
-});
 
 export default IngredientTextInput;

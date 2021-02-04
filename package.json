@@ -11,7 +11,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@ptomasroos/react-native-multi-slider": "^2.2.2",
     "@react-native-community/masked-view": "^0.1.10",
+    "@react-native-community/slider": "^3.0.3",
     "@react-navigation/native": "^5.9.1",
     "@react-navigation/stack": "^5.14.1",
     "@reduxjs/toolkit": "^1.5.0",
@@ -19,15 +21,16 @@
     "formik": "^2.2.6",
     "node-fetch": "^3.0.0-beta.9",
     "react": "16.13.1",
-    "react-native": "0.63.4",
+    "react-native": "^0.63.4",
     "react-native-collapsible": "^1.5.3",
     "react-native-date-picker": "^3.2.8",
     "react-native-gesture-handler": "^1.9.0",
-    "react-native-reanimated": "^1.13.2",
+    "react-native-reanimated": "^1.7.0",
     "react-native-safe-area-context": "^3.1.9",
     "react-native-screens": "^2.15.2",
     "react-redux": "^7.2.2",
     "redux": "^4.0.5",
+    "styled-components": "^5.2.1",
     "yup": "^0.32.8"
   },
   "devDependencies": {
