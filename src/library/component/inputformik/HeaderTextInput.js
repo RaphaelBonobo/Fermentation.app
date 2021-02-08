@@ -22,7 +22,7 @@ const HeaderTextInput = (props) => {
   // setFieldTouched is a Formik hook and onBlur allow the parent component to be aware of which Input is in interaction with the user.
 
   return (
-    <>
+    <ContainerHeaderInput>
       <StyledHeaderInput
         value={value}
         onChangeText={(text) => onChange(name)(text)}
@@ -32,9 +32,15 @@ const HeaderTextInput = (props) => {
         }}
         {...inputProps}
       />
-    </>
+    </ContainerHeaderInput>
   );
 };
+
+const ContainerHeaderInput = styled.View`
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+`;
 
 const StyledHeaderInput = styled.TextInput`
   color: ${(props) => props.theme.main};

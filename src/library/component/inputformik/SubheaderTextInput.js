@@ -4,8 +4,8 @@
 
 // This component ONLY WORKS within a <Formik> component and as a child of a <Field> component.
 
-import {TextInput} from 'react-native';
 import React from 'react';
+import styled from 'styled-components/native';
 
 const SubheaderTextInput = (props) => {
   // Formik sends in the props that automagically connects the Input form with the
@@ -23,7 +23,7 @@ const SubheaderTextInput = (props) => {
 
   return (
     <>
-      <TextInput
+      <StyledSubheaderInput
         value={value}
         onChangeText={(text) => onChange(name)(text)}
         onBlur={() => {
@@ -35,5 +35,11 @@ const SubheaderTextInput = (props) => {
     </>
   );
 };
+
+const StyledSubheaderInput = styled.TextInput`
+  color: ${(props) => props.theme.main};
+  margin-left: auto;
+  margin-right: auto;
+`;
 
 export default SubheaderTextInput;

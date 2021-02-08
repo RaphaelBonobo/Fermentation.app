@@ -12,6 +12,7 @@ import React from 'react';
 import {Strings} from 'res';
 import RegularTextInput from 'inputformik/RegularTextInput.js';
 import {Field} from 'formik';
+import styled from 'styled-components/native';
 
 const IngredientTextInput = (props) => {
   const {
@@ -20,7 +21,7 @@ const IngredientTextInput = (props) => {
   return (
     <>
       {values.ingredients.map((ingredients, index) => (
-        <View key={index}>
+        <IngredientContainer key={index}>
           <Field
             key={`ingredients.${index}.nameIngredient`}
             name={`ingredients.${index}.nameIngredient`}
@@ -40,7 +41,7 @@ const IngredientTextInput = (props) => {
               props.remove(index);
             }}
           />
-        </View>
+        </IngredientContainer>
       ))}
       <Button
         title={Strings.scrMnAddIngButton}
@@ -54,5 +55,9 @@ const IngredientTextInput = (props) => {
     </>
   );
 };
+
+const IngredientContainer = styled.View`
+  flex-direction: row;
+`;
 
 export default IngredientTextInput;

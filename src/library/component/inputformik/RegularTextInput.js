@@ -9,6 +9,7 @@
 
 import {TextInput} from 'react-native';
 import React from 'react';
+import styled from 'styled-components/native';
 
 const RegularTextInput = (props) => {
   // Formik sends in the props that automagically connects the Input form with the
@@ -26,7 +27,7 @@ const RegularTextInput = (props) => {
 
   return (
     <>
-      <TextInput
+      <StyledRegularInput
         value={value}
         onChangeText={(text) => onChange(name)(text)}
         onBlur={() => {
@@ -38,5 +39,12 @@ const RegularTextInput = (props) => {
     </>
   );
 };
+
+const StyledRegularInput = styled.TextInput`
+  color: ${(props) => props.theme.main};
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+`;
 
 export default RegularTextInput;

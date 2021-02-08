@@ -29,15 +29,15 @@ const AddFermentScreen = () => {
           ingredients: [{nameIngredient: '', quantity: ''}],
           steps: [
             {
-              nameStep: 'Step',
-              durationStep: 'Pouleto',
-              tempStep: 'Como estas?',
+              nameStep: '',
+              durationStep: '',
+              tempStep: '',
               controlSimpleStep: [''],
               commentStep: '',
             },
           ],
         }}
-        onSubmit={(values) => console.log(values)}>
+        onSubmit={(values) => console.log(values.steps)}>
         {({handleChange, handleBlur, handleSubmit, values}) => (
           <>
             {/* This field call for a specifically tailored TextInput <HeaderTextInput> to gather the main name of the ferment */}
@@ -46,7 +46,7 @@ const AddFermentScreen = () => {
               name="fermentName"
               placeholder={Strings.afNameFerment}
             />
-            <Subheader subheader={Strings.afBasicInfo} />
+            <Subheader subheader={Strings.afTypeFerment} />
 
             {/* This field call for a specifically tailored TextInput <RegularTextInput> to gather the type of the ferment */}
             <Field
@@ -54,6 +54,8 @@ const AddFermentScreen = () => {
               name="fermentType"
               placeholder={Strings.afTypeFerment}
             />
+
+            <Subheader subheader={'Ferment start date'} />
 
             {/* This field call for a specifically tailored TextInput <RegularDateInput> to gather the date when the ferment began
             it contains the DatePicker component */}
