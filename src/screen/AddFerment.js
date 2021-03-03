@@ -32,12 +32,12 @@ const AddFermentScreen = () => {
               nameStep: '',
               durationStep: '',
               tempStep: '',
-              controlSimpleStep: [''],
+              controlSimpleStep: [],
               commentStep: '',
             },
           ],
         }}
-        onSubmit={(values) => console.log(values.steps)}>
+        onSubmit={(values) => console.log(values)}>
         {({handleChange, handleBlur, handleSubmit, values}) => (
           <>
             {/* This field call for a specifically tailored TextInput <HeaderTextInput> to gather the main name of the ferment */}
@@ -53,6 +53,7 @@ const AddFermentScreen = () => {
               component={RegularTextInput}
               name="fermentType"
               placeholder={Strings.afTypeFerment}
+              multiline={false}
             />
 
             <Subheader subheader={'Ferment start date'} />

@@ -7,7 +7,6 @@
 
 // This component ONLY WORKS within a <Formik> component and as a child of a <Field> component.
 
-import {TextInput} from 'react-native';
 import React from 'react';
 import styled from 'styled-components/native';
 
@@ -28,6 +27,7 @@ const RegularTextInput = (props) => {
   return (
     <>
       <StyledRegularInput
+        multiline={props.multiline}
         value={value}
         onChangeText={(text) => onChange(name)(text)}
         onBlur={() => {
@@ -39,12 +39,12 @@ const RegularTextInput = (props) => {
     </>
   );
 };
-
+// Depending of the props.multiline boolean, the width of the field will change (if multiline, it will be necessary to be bigger)
 const StyledRegularInput = styled.TextInput`
   color: ${(props) => props.theme.main};
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
+  width: ${(props) => (props.multiline ? '90%' : '40%')};
 `;
 
 export default RegularTextInput;

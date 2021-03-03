@@ -37,13 +37,14 @@ const HeaderTextInput = (props) => {
 };
 
 const ContainerHeaderInput = styled.View`
-  margin-left: auto;
+  text-align: center;
   margin-right: auto;
   width: 40%;
 `;
 
 const StyledHeaderInput = styled.TextInput`
   color: ${(props) => props.theme.main};
+  font-size: ${(props) => props.theme.fontSizeHeader};
 `;
 
 export default HeaderTextInput;

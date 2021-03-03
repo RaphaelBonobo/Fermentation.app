@@ -1,4 +1,6 @@
-//TemperatureInput
+// TemperatureInput
+// Is meant to be custom made but now relies on the MultiSlider Library
+// Allows us to create a slider for the user to select intuitively a range of temperature
 
 import MultiSlider from '@ptomasroos/react-native-multi-slider';
 import React, {useState} from 'react';
@@ -8,10 +10,9 @@ const TemperatureInput = (props) => {
   const {
     field: {name},
     form: {setFieldValue},
-    ...inputProps
   } = props;
 
-  const [temp, setTemp] = useState([2, 9]);
+  const [temp, setTemp] = useState(['*', '*']);
 
   let tempDisplay = temp[0] + ' - ' + temp[1] + '°C';
 
@@ -21,8 +22,8 @@ const TemperatureInput = (props) => {
       <MultiSlider
         onValuesChangeFinish={(val) => setFieldValue(name, val)}
         onValuesChange={(vals) => setTemp(vals)}
-        min={1}
-        max={10}
+        min={8}
+        max={40}
         values={temp}
         minMarkerOverlapStepDistance={2}
         allowOverlap={false}

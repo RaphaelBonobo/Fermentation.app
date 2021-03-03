@@ -1,7 +1,15 @@
+// DurationInput
+// A custom made input reliant on rn-gesture-handler to scroll and add a number
+// It is a group of 3 fields (number of hours, days, and month) which produce one data at the end
+// No matter what the user chooses, the final result is translated in the smallest unit usually used in fermentation : hours
+
+// This component ONLY WORKS within a <Formik> component and as a child of a <Field> component.
+
 import {Text} from 'react-native';
 import React, {useState} from 'react';
 import {PanGestureHandler, State} from 'react-native-gesture-handler';
 import styled from 'styled-components/native';
+import {Strings} from 'res';
 
 const DurationInput = (props) => {
   const {
@@ -14,6 +22,10 @@ const DurationInput = (props) => {
   const [month, setMonth] = useState(0);
 
   const onMonthChange = (e) => {
+    // This comment work for the two following function (onDay and onHour)
+    // The position of the finger on the vertical axis defines the number
+    // We chose that the user has to go up to increase and down to decrease
+    // The function helps display the current number to the user, so he knows in realtime where is at
     if (e.nativeEvent.y > 0) {
       setMonth(0);
     } else if (e.nativeEvent.y < -120) {
@@ -52,7 +64,7 @@ const DurationInput = (props) => {
   return (
     <DurationContainer>
       <CountingContainer>
-        <Text>{'Month'}</Text>
+        <Text>{Strings.month}</Text>
         <PanGestureHandler
           onHandlerStateChange={onStateChange}
           onGestureEvent={onMonthChange}>
@@ -61,7 +73,7 @@ const DurationInput = (props) => {
       </CountingContainer>
 
       <CountingContainer>
-        <Text>{'Days'}</Text>
+        <Text>{Strings.day}</Text>
         <PanGestureHandler
           onHandlerStateChange={onStateChange}
           onGestureEvent={onDayChange}>
@@ -70,7 +82,7 @@ const DurationInput = (props) => {
       </CountingContainer>
 
       <CountingContainer>
-        <Text>{'Hours'}</Text>
+        <Text>{Strings.hour}</Text>
         <PanGestureHandler
           onHandlerStateChange={onStateChange}
           onGestureEvent={onHourChange}>

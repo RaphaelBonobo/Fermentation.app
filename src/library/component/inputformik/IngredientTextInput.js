@@ -7,7 +7,7 @@
 
 // This component ONLY WORKS within a <Formik> component and as a child of a <Field> component.
 
-import {Button, View} from 'react-native';
+import {Button} from 'react-native';
 import React from 'react';
 import {Strings} from 'res';
 import RegularTextInput from 'inputformik/RegularTextInput.js';
@@ -26,13 +26,15 @@ const IngredientTextInput = (props) => {
             key={`ingredients.${index}.nameIngredient`}
             name={`ingredients.${index}.nameIngredient`}
             component={RegularTextInput}
-            placeholder="Type in an ingredient"
+            placeholder={Strings.placeholderIngredient}
+            multiline={false}
           />
           <Field
             key={`ingredients.${index}.quantity`}
             name={`ingredients.${index}.quantity`}
             component={RegularTextInput}
-            placeholder="Type in a quantity"
+            placeholder={Strings.placeholderQuantity}
+            multiline={false}
           />
           <Button
             key={`ingredients.${index}.remove`}

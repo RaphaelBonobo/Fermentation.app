@@ -1,20 +1,4 @@
-// StepsContainer
-
-// The main point of all of this : onChangeText={(text) => onChange(name)(text)}
-// This allows us to dynamically add new custom fields and track the state separatly using Formik magic without complex store manipulation.
-
-// This component ONLY WORKS within a <Formik> component and as a child of a <Field> component.
-
-// This is the Accordion Component core to our main feature : the recipe from the step approach, each step being a collapsible element in which
-// we can find nested fields describing every step our ferment takes or what we are suppose to do. Props used here :
-// 'activeSections' tracks the section that is currently open. The useState hook keeps track of that.
-// 'section' is an array of the steps that are dynamically added by the user.
-// 'renderHeader' & 'renderContent' are component with a <View> in it, which are composed in our case with more forms.
-// 'touchableComponent' is the component used to reference the 'on header press' sequence. Here we chose to use TouchableOpacity but
-// TouchableWithoutFeedback was also possible.
-// 'duration' is the time taken to open the section.
-// 'onChange' opens the good section asked by the user.
-// For additionnal props see the documentation, referenced in the App Wiki.
+// DashboardFermentContainer
 
 import {Button, TouchableOpacity} from 'react-native';
 import React from 'react';
