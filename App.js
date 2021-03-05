@@ -2,7 +2,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import AddFermentScreen from './src/screen/AddFerment.js';
-import MainScreen from './src/screen/Main.js';
+import Dashboard from './src/screen/Dashboard.js';
 import styled, {ThemeProvider} from 'styled-components/native';
 import theme from 'res/theme.js';
 //import Strings from 'res/strings.js';
@@ -18,7 +18,7 @@ const App = () => {
           screenOptions={{
             headerShown: false,
           }}>
-          <Stack.Screen name="Main" component={MainScreen} />
+          <Stack.Screen name="Main" component={Dashboard} />
           <Stack.Screen name="AddFerment" component={AddFermentScreen} />
         </Stack.Navigator>
       </NavigationContainer>

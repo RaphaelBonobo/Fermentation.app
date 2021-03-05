@@ -1,6 +1,6 @@
 // theme fileimport {Fonts, Colors} from 'res';
 const theme = {
-  main: 'mediumseagreen',
+  main: 'black',
   fontSizeHeader: '24px',
 };
 

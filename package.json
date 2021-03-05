@@ -1,6 +1,6 @@
 {
-  "name": "projetkatz",
-  "version": "0.0.1",
+  "name": "fermentation.app",
+  "version": "0.0.2",
   "description": "An android and ios app to track ferment, hold on to your recipe and share it with the world",
   "private": true,
   "scripts": {
@@ -55,6 +55,7 @@
     },
     {
       "name": "Jacques Delon"
+      
     }
   ]
 }
