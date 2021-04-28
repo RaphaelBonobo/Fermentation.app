@@ -7699,7 +7699,7 @@
   dependencies:
     "sax" "^1.2.1"
 
-"xmldom@0.1.x":
+"xmldom@^0.1.31", "xmldom@0.1.x":
   "integrity" "sha512-yS2uJflVQs6n+CyjHoaBmVSqIDevTAWrzMmjG1Gc7h1qQ7uVozNhEPJAwZXWyGQ/Gafo3fCwrcaokezLPupVyQ=="
   "resolved" "https://registry.npmjs.org/xmldom/-/xmldom-0.1.31.tgz"
   "version" "0.1.31"
